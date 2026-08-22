@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zones Enablement Portal · Lauren Inacio</title>
+<meta name="description" content="Designing a self-serve enablement experience for Zones sales teams.">
+<link rel="canonical" href="https://laureninacio.design/zones.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lauren Inacio">
+<meta property="og:title" content="Zones Enablement Portal · Lauren Inacio">
+<meta property="og:description" content="Designing a self-serve enablement experience for Zones sales teams.">
+<meta property="og:url" content="https://laureninacio.design/zones.html">
+<meta property="og:image" content="https://laureninacio.design/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#4E4187"/><text x="50" y="50" font-family="Helvetica,Arial,sans-serif" font-size="28" font-weight="700" fill="#F7F5F0" text-anchor="middle" dominant-baseline="central">LI</text></svg></template>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/adventure-buddy-design-system-52194f19-a947-4e11-a96b-34fe02f74226/colors_and_type.css">
+<script src="_ds/adventure-buddy-design-system-52194f19-a947-4e11-a96b-34fe02f74226/_ds_bundle.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:var(--stone-50); }
+  * { box-sizing:border-box; }
+  a { color:var(--lavender-600); text-decoration:none; }
+  a:hover { color:var(--color-brand-strong); }
+  :root { --radius-sm:2px; --radius-md:3px; --radius-lg:4px; --radius-xl:6px; --radius-pill:4px; --font-display:'Schibsted Grotesk','Helvetica Neue',Arial,sans-serif; --font-sans:'Instrument Sans','Helvetica Neue',Arial,sans-serif; --acc-wca:#4E4187; --acc-ab:#4E4187; --acc-cb:#4E4187; --acc-z:#4E4187;
+          --acc-wca-soft:#E9E4F5; --acc-ab-soft:#E9E4F5; --acc-cb-soft:#E9E4F5; --acc-z-soft:#E9E4F5; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(14px);} to { opacity:1; transform:none;} }
+
+  @media (max-width: 760px) {
+    [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    header, footer { padding-left: 20px !important; padding-right: 20px !important; }
+    section, main > div { padding-left: 20px !important; padding-right: 20px !important; }
+    h1 { font-size: clamp(1.9rem, 8vw, 2.6rem) !important; }
+  }
+</style>
+<style>
+  .lb-zoomable { cursor: zoom-in; }
+  #lb-overlay { position:fixed; inset:0; z-index:999; background:rgba(24,22,30,0.93); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:4vh 4vw; cursor:zoom-out; animation:lbFade 180ms ease; }
+  #lb-overlay img { max-width:94vw; max-height:86vh; width:auto; height:auto; border-radius:4px; box-shadow:0 30px 80px rgba(0,0,0,0.5); }
+  #lb-overlay .lb-cap { color:#D8D2C4; font-family:'Spline Sans Mono',monospace; font-size:13px; letter-spacing:0.04em; text-align:center; max-width:70ch; }
+  @keyframes lbFade { from { opacity:0; } to { opacity:1; } }
+</style>
+<script src="lightbox.js?v=3"></script>
+<script src="palette.js?v=2"></script>
+<script src="reveal.js?v=4"></script>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<script src="translations/common.i18n.js?v=1"></script>
+<script src="translations/zones.i18n.js?v=1"></script>
+<script src="i18n.js?v=1"></script>
+</helmet>
+
+<div data-theme="light" style="min-height:100vh; background:var(--bg-canvas, var(--stone-50)); color:var(--fg-1); font-family:var(--font-sans);">
+
+  <header style="position:sticky; top:0; z-index:30; display:flex; align-items:center; justify-content:space-between; gap:var(--space-5); padding:var(--space-4) var(--space-7); background:color-mix(in srgb, var(--bg-canvas, var(--stone-50)) 84%, transparent); backdrop-filter:blur(16px); border-bottom:1px solid var(--border-subtle);">
+    <a href="index.html" style="font-family:var(--font-display); font-size:var(--text-md); font-weight:500; color:var(--fg-1); display:inline-flex; align-items:center; gap:9px;"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;"><g transform="rotate(6 12 12)"><path d="M4 3.5 h16 v12 l-4.5 4.5 h-11.5 z" fill="#E9E4F5"></path><path d="M4 3.5 h16 v12 l-4.5 4.5 h-11.5 z" fill="none" stroke="#4E4187" stroke-width="1.5" stroke-linejoin="round"></path><path d="M20 15.5 l-4.5 4.5 v-4.5 z" fill="#4E4187"></path><path d="M8 9 h8.5 M8 12.5 h5.5" stroke="#4E4187" stroke-width="1.5" stroke-linecap="round"></path></g></svg><span>Lauren <em>Inacio</em></span></a>
+    <nav style="display:flex; align-items:center; gap:var(--space-5); font-size:var(--text-sm);">
+      <a href="index.html#work" style="color:var(--fg-2); padding-bottom:3px; border-bottom:1.5px solid transparent; transition:color 140ms, border-color 140ms;" style-hover="color:var(--color-brand); border-bottom:1.5px solid var(--color-brand);">All case studies</a>
+      <a href="assets/Lauren_Inacio_Product_Designer_Resume_2026.pdf" download="Lauren_Inacio_Product_Designer_Resume_2026.pdf" style="color:var(--fg-2); padding-bottom:3px; border-bottom:1.5px solid transparent; transition:color 140ms, border-color 140ms;" style-hover="color:var(--color-brand); border-bottom:1.5px solid var(--color-brand);">Résumé</a>
+      
+      <a href="index.html#contact" style="display:inline-flex; align-items:center; min-height:38px; padding:0 var(--space-5); border-radius:var(--radius-pill); background:var(--acc-z); color:var(--fg-on-brand); font-size:var(--text-sm); font-weight:500;" style-hover="opacity:0.9; color:var(--fg-on-brand);">Get in touch</a>
+    </nav>
+  </header>
+  <section style="background:var(--acc-z-soft); border-bottom:1px solid var(--border-subtle);">
+    <div style="max-width:1080px; margin:0 auto; padding:var(--space-9) var(--space-7); animation:fadeUp 480ms cubic-bezier(0.16,1,0.3,1) both;">
+      <div style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.14em; text-transform:uppercase; color:var(--acc-z); margin-bottom:var(--space-5);">Case study 04 · Enablement · IBM + Zones</div>
+      <h1 style="font-family:var(--font-display); font-size:clamp(2.2rem, 4.2vw, 3.5rem); font-weight:500; line-height:1.08; letter-spacing:-0.03em; color:var(--fg-1); margin:0 0 var(--space-5); max-width:24ch; text-wrap:pretty;">The portal that turned out to be a sales tool</h1>
+      <p style="font-size:var(--text-md); line-height:1.65; color:var(--fg-2); max-width:56ch; margin:0 0 var(--space-6);">Zones sellers were advising small and mid-tier hospitals on security technologies nobody had given them time to learn. My first project as a designer at IBM: shipped, validated, and years later rebuilt as a documented system.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:var(--space-3);"><span style="display:inline-flex; align-items:center; min-height:34px; padding:0 var(--space-4); border-radius:var(--radius-pill); background:var(--bg-surface); border:1px solid var(--border-subtle); color:var(--fg-2); font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.04em;">2019, revisited 2026</span><span style="display:inline-flex; align-items:center; min-height:34px; padding:0 var(--space-4); border-radius:var(--radius-pill); background:var(--bg-surface); border:1px solid var(--border-subtle); color:var(--fg-2); font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.04em;">Research + design system</span><span style="display:inline-flex; align-items:center; min-height:34px; padding:0 var(--space-4); border-radius:var(--radius-pill); background:var(--bg-surface); border:1px solid var(--border-subtle); color:var(--fg-2); font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.04em;">WCAG 2.1 AA as the floor</span></div>
+      <div style="margin-top:var(--space-5);"><a href="https://lsi117.github.io/ZEP-RD/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; min-height:48px; padding:0 var(--space-6); border-radius:var(--radius-pill); background:var(--fg-1); color:var(--bg-canvas); font-size:var(--text-base); font-weight:600; transition:background 140ms cubic-bezier(0.32,0.72,0.24,1), transform 140ms cubic-bezier(0.32,0.72,0.24,1), box-shadow 140ms cubic-bezier(0.32,0.72,0.24,1);" style-hover="background:#4E4187; color:#fff; transform:translateY(-2px); box-shadow:0 8px 20px rgba(78,65,135,0.35);" style-active="transform:translateY(0) scale(0.98); box-shadow:none;">Try it live ↗</a></div>
+    </div>
+  </section>
+
+  <section style="border-bottom:1px solid var(--border-subtle);">
+    <div style="max-width:1080px; margin:0 auto; padding:var(--space-6) var(--space-7);">
+      <div style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.14em; text-transform:uppercase; color:var(--acc-z); margin-bottom:var(--space-4);">In brief · the 60-second version</div>
+      <div style="display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:1px; background:var(--border-default); border:1px solid var(--border-default);">
+        <div style="background:var(--bg-surface); padding:var(--space-5); display:flex; flex-direction:column; gap:12px;">
+          <span style="width:36px; height:36px; display:flex; align-items:center; justify-content:center; background:color-mix(in srgb, var(--acc-z) 12%, var(--bg-surface));"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--acc-z)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></span>
+          <span style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.12em; text-transform:uppercase; color:var(--fg-3);">The problem</span>
+          <span style="font-size:var(--text-sm); line-height:1.6; color:var(--fg-2); margin-top:-4px;">Zones sellers got one hour of shadowing to learn a complex security portfolio before selling it.</span>
+        </div>
+        <div style="background:var(--bg-surface); padding:var(--space-5); display:flex; flex-direction:column; gap:12px;">
+          <span style="width:36px; height:36px; display:flex; align-items:center; justify-content:center; background:color-mix(in srgb, var(--acc-z) 12%, var(--bg-surface));"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--acc-z)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></span>
+          <span style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.12em; text-transform:uppercase; color:var(--fg-3);">The constraint</span>
+          <span style="font-size:var(--text-sm); line-height:1.6; color:var(--fg-2); margin-top:-4px;">My first project as a designer at IBM, designing solo for a partner sales audience I had to research from scratch.</span>
+        </div>
+        <div style="background:var(--bg-surface); padding:var(--space-5); display:flex; flex-direction:column; gap:12px;">
+          <span style="width:36px; height:36px; display:flex; align-items:center; justify-content:center; background:color-mix(in srgb, var(--acc-z) 12%, var(--bg-surface));"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--acc-z)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"></path><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"></path><path d="m2.3 2.3 7.286 7.286"></path><circle cx="11" cy="11" r="2"></circle></svg></span>
+          <span style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.12em; text-transform:uppercase; color:var(--fg-3);">What I did</span>
+          <span style="font-size:var(--text-sm); line-height:1.6; color:var(--fg-2); margin-top:-4px;">Designed a modular lesson portal with inline knowledge checks; years later rebuilt it as a documented design system.</span>
+        </div>
+        <div style="background:var(--bg-surface); padding:var(--space-5); display:flex; flex-direction:column; gap:12px;">
+          <span style="width:36px; height:36px; display:flex; align-items:center; justify-content:center; background:color-mix(in srgb, var(--acc-z) 12%, var(--bg-surface));"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--acc-z)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></span>
+          <span style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.12em; text-transform:uppercase; color:var(--fg-3);">The result</span>
+          <span style="font-size:var(--text-sm); line-height:1.6; color:var(--fg-2); margin-top:-4px;">Validated with sellers and praised by a national channels sales executive as "more than a portal, it truly is a sales tool."</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="max-width:1080px; margin:0 auto; padding:var(--space-8) var(--space-7) 0;">
+
+    <div style="margin-bottom:var(--space-8);">
+      <div style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.14em; text-transform:uppercase; color:var(--acc-z); margin-bottom:var(--space-3);">The challenge</div>
+      <h2 style="font-family:var(--font-display); font-size:var(--text-xl); font-weight:500; line-height:1.2; letter-spacing:-0.02em; color:var(--fg-1); margin:0 0 var(--space-4); max-width:30ch;">A patient-safety problem wearing an enablement costume</h2>
+      
+      <p style="font-size:var(--text-base); line-height:1.75; color:var(--fg-2); margin:0 0 var(--space-4); max-width:68ch;">Through the Integrated Multivendor Services partnership, IBM and Zones brought stronger security solutions to a notoriously under-resourced buyer: small and mid-tier hospitals. But a great solution only matters if the person selling it understands it, and when a seller guides a hospital security decision, the downstream effect lands on doctors and patients.</p>
+      <p style="font-family:var(--font-display); font-style:italic; font-size:var(--text-lg); line-height:1.45; color:var(--fg-1); margin:var(--space-5) 0; padding-left:var(--space-5); border-left:3px solid var(--acc-z); max-width:50ch;">How might we help busy sellers learn security technologies in the gaps of their day, and feel genuinely ready to advise a hospital, without adding to their cognitive load?</p>
+    </div>
+    <div style="margin-bottom:var(--space-8);">
+      <div style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.14em; text-transform:uppercase; color:var(--acc-z); margin-bottom:var(--space-3);">The person</div>
+      <h2 style="font-family:var(--font-display); font-size:var(--text-xl); font-weight:500; line-height:1.2; letter-spacing:-0.02em; color:var(--fg-1); margin:0 0 var(--space-4); max-width:30ch;">Tim, the technology seller</h2>
+      
+      <div style="display:grid; grid-template-columns:150px 1fr; gap:var(--space-6); align-items:start;">
+        <img src="assets/tim.png" alt="Tim, the technology seller persona" style="display:block; width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-md);">
+        <div>
+          <p style="font-size:var(--text-base); line-height:1.75; color:var(--fg-2); margin:0 0 var(--space-4); max-width:68ch;">Ten years in the industry and genuinely expert, Tim handles multiple accounts and recommends technology that fits each client. He has almost no time to learn a new technology before it reaches clients, prefers hands-on training he rarely gets, and struggles to keep up with the unique environment of every hospital he advises.</p>
+          <p style="font-size:var(--text-base); line-height:1.75; color:var(--fg-2); margin:0 0 var(--space-4); max-width:68ch;"><strong style="color:var(--fg-1);">The hill:</strong> Tim will have a centralized, easy-to-navigate portal that equips him to confidently sell security technologies to small and mid-tier hospitals.</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin-bottom:var(--space-8);">
+      <div style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.14em; text-transform:uppercase; color:var(--acc-z); margin-bottom:var(--space-3);">How I worked</div>
+      <h2 style="font-family:var(--font-display); font-size:var(--text-xl); font-weight:500; line-height:1.2; letter-spacing:-0.02em; color:var(--fg-1); margin:0 0 var(--space-4); max-width:30ch;">Start with the people</h2>
+      
+      <p style="font-size:var(--text-base); line-height:1.75; color:var(--fg-2); margin:0 0 var(--space-4); max-width:68ch;">I ran interviews with Zones sellers to map the as-is experience: their workflow, their frustrations, the moments they felt exposed in front of a client. Those conversations are why the product solved the sellers real problem rather than the one I had assumed. What emerged was a minimal delightful experience: modular lessons in digestible chunks, inline knowledge checks after each lesson, and an iterative loop of testing with the sellers themselves.</p>
+      <figure style="margin:var(--space-6) 0; padding:var(--space-6); border-radius:var(--radius-lg); background:var(--acc-z); color:#FFFFFF;"><blockquote style="margin:0 0 var(--space-4); font-family:var(--font-display); font-style:italic; font-size:var(--text-lg); line-height:1.4;">“Having 40+ years at IBM, what they have delivered is one of the best, if not the best, piece of work I have seen… It is more than a portal, it truly is a sales tool.”</blockquote><figcaption style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.04em; opacity:0.85; line-height:1.5;">Mike Perry — National Channels Sales Executive, IBM</figcaption></figure>
+    </div>
+    <div style="margin-bottom:var(--space-8);">
+      <div style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.14em; text-transform:uppercase; color:var(--acc-z); margin-bottom:var(--space-3);">Revisiting it</div>
+      <h2 style="font-family:var(--font-display); font-size:var(--text-xl); font-weight:500; line-height:1.2; letter-spacing:-0.02em; color:var(--fg-1); margin:0 0 var(--space-4); max-width:30ch;">Redesigned as a system</h2>
+      
+      <p style="font-size:var(--text-base); line-height:1.75; color:var(--fg-2); margin:0 0 var(--space-4); max-width:68ch;">Returning to my first IBM project years later, the content strategy and research held up. What was missing was systems thinking: the original was a set of well-designed screens, not yet a system. I rebuilt it on IBM Carbon, token-based, documenting every deliberate departure as a parity map: teal promoted to a dedicated learning-progress accent so IBM blue keeps meaning action; softened corners and two subtle elevation levels so a learning product reads as approachable; larger body type in service of the digestible principle.</p>
+      <p style="font-family:var(--font-display); font-style:italic; font-size:var(--text-lg); line-height:1.45; color:var(--fg-1); margin:var(--space-5) 0; padding-left:var(--space-5); border-left:3px solid var(--acc-z); max-width:50ch;">Knowing the rules well enough to break them precisely is the part of this I am proudest of.</p>
+      <figure style="margin:var(--space-5) 0;"><span style="display:block;"><span style="display:block; width:94%; margin:0 auto; border:8px solid #1E2226; border-bottom-width:14px; border-radius:10px 10px 0 0; background:var(--bg-sunken); box-shadow:var(--shadow-lg); overflow:hidden;"><img src="assets/z-dashboard.jpg" alt="Redesigned Zones portal dashboard" style="display:block; width:100%;"></span><span style="display:block; height:12px; background:linear-gradient(#ECE9E0 0%, #CFCBC0 78%, #ABA79C 100%); border-radius:0 0 9px 9px; box-shadow:var(--shadow-md); position:relative;"><span style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:90px; height:4px; background:#B8B4A9; border-radius:0 0 4px 4px;"></span></span></span></figure>
+      <figure style="margin:var(--space-5) 0;"><span style="display:block;"><span style="display:block; width:94%; margin:0 auto; border:8px solid #1E2226; border-bottom-width:14px; border-radius:10px 10px 0 0; background:var(--bg-sunken); box-shadow:var(--shadow-lg); overflow:hidden;"><img src="assets/z-lesson.jpg" alt="Redesigned lesson view" style="display:block; width:100%;"></span><span style="display:block; height:12px; background:linear-gradient(#ECE9E0 0%, #CFCBC0 78%, #ABA79C 100%); border-radius:0 0 9px 9px; box-shadow:var(--shadow-md); position:relative;"><span style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:90px; height:4px; background:#B8B4A9; border-radius:0 0 4px 4px;"></span></span></span></figure>
+      <figure style="margin:var(--space-5) 0;"><span style="display:block;"><span style="display:block; width:94%; margin:0 auto; border:8px solid #1E2226; border-bottom-width:14px; border-radius:10px 10px 0 0; background:var(--bg-sunken); box-shadow:var(--shadow-lg); overflow:hidden;"><img src="assets/z-check.jpg" alt="Knowledge check results with explanatory feedback" style="display:block; width:100%;"></span><span style="display:block; height:12px; background:linear-gradient(#ECE9E0 0%, #CFCBC0 78%, #ABA79C 100%); border-radius:0 0 9px 9px; box-shadow:var(--shadow-md); position:relative;"><span style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:90px; height:4px; background:#B8B4A9; border-radius:0 0 4px 4px;"></span></span></span><figcaption style="font-family:var(--font-display); font-style:italic; font-size:var(--text-sm); line-height:1.5; color:var(--fg-3); margin-top:var(--space-3);">Knowledge checks carry the personality: immediate correct and incorrect states, feedback that explains why, and a pointer back to the relevant lesson chunk.</figcaption></figure>
+    </div>
+    <div style="margin-bottom:var(--space-8);">
+      <div style="font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.14em; text-transform:uppercase; color:var(--acc-z); margin-bottom:var(--space-3);">Accessibility and words</div>
+      <h2 style="font-family:var(--font-display); font-size:var(--text-xl); font-weight:500; line-height:1.2; letter-spacing:-0.02em; color:var(--fg-1); margin:0 0 var(--space-4); max-width:30ch;">Inclusive by default, not retrofitted</h2>
+      
+      <ul style="margin:0 0 var(--space-4); padding:0; list-style:none; display:grid; gap:var(--space-4); max-width:68ch;"><li style="font-size:var(--text-base); line-height:1.7; color:var(--fg-2); padding-left:var(--space-5); border-left:2px solid var(--acc-z);">WCAG 2.1 AA as the floor: visible focus states on every control, labelled inputs throughout.</li><li style="font-size:var(--text-base); line-height:1.7; color:var(--fg-2); padding-left:var(--space-5); border-left:2px solid var(--acc-z);">Quiz and status meaning carried by colour and icon and text, critical given how much green and red the quizzes use.</li><li style="font-size:var(--text-base); line-height:1.7; color:var(--fg-2); padding-left:var(--space-5); border-left:2px solid var(--acc-z);">Sentence case with plain, active verbs (check answer, continue, mark complete), consistent through each flow.</li><li style="font-size:var(--text-base); line-height:1.7; color:var(--fg-2); padding-left:var(--space-5); border-left:2px solid var(--acc-z);">Empty and error states that give direction instead of apology.</li></ul>
+      <p style="font-size:var(--text-base); line-height:1.75; color:var(--fg-2); margin:0 0 var(--space-4); max-width:68ch;"><em>A note on scope:</em> the original portal was designed, shipped, and validated with Zones sellers. The redesign is a self-initiated exploration; I keep the two clearly separated.</p>
+    </div>
+  </section>
+
+  <section style="max-width:1080px; margin:0 auto; padding:var(--space-7); display:flex; justify-content:space-between; gap:var(--space-4); border-top:1px solid var(--border-subtle);">
+    <a href="cloud-broker.html" style="display:inline-flex; align-items:center; gap:10px; min-height:46px; padding:0 var(--space-5); border-radius:var(--radius-pill); border:1px solid var(--border-default); color:var(--fg-1); font-size:var(--text-sm);" style-hover="border-color:var(--color-brand); color:var(--fg-1);">← z/OS Cloud Broker</a>
+    <a href="index.html#work" style="display:inline-flex; align-items:center; gap:10px; min-height:46px; padding:0 var(--space-5); border-radius:var(--radius-pill); border:1px solid var(--border-default); color:var(--fg-1); font-size:var(--text-sm);" style-hover="border-color:var(--color-brand); color:var(--fg-1);">All case studies →</a>
+  </section>
+  <footer style="border-top:1px solid var(--border-subtle); padding:var(--space-5) var(--space-7);">
+    <div style="max-width:1080px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:var(--space-4); font-family:var(--font-mono); font-size:var(--text-xs); color:var(--fg-3); letter-spacing:0.06em;">
+      <span>Lauren Inacio · product designer · updated August 2026</span>
+      <span>laureninacio@gmail.com · <a href="https://www.linkedin.com/in/laureninacio/" style="color:var(--fg-3);">LinkedIn</a></span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {};
+  renderVals() {
+    return {
+    };
+  }
+}
+</script>
+</body>
+</html>

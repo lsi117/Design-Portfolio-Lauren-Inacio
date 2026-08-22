@@ -1,0 +1,73 @@
+(function () {
+  var T = window.LI_TR = window.LI_TR || {};
+  ['pt', 'de', 'nl'].forEach(function (l) { T[l] = T[l] || {}; });
+  Object.assign(T.pt, {
+    "All case studies": "Todos os estudos de caso",
+    "Résumé": "Currículo",
+    "Get in touch": "Entrar em contacto",
+    "Password protected": "Protegido por palavra-passe",
+    "This case study is confidential": "Este estudo de caso é confidencial",
+    "This work is shared with permission but not publicly. Enter the password from my résumé or application — or": "Este trabalho é partilhado com autorização, mas não publicamente. Introduza a palavra-passe do meu currículo ou candidatura — ou",
+    "email me": "envie-me um e-mail",
+    "and I'll send it over.": "e eu envio-a.",
+    "Unlock": "Desbloquear",
+    "Password": "Palavra-passe",
+    "← Back to all work": "← Voltar a todos os trabalhos",
+    "← All case studies": "← Todos os estudos de caso",
+    "Lauren Inacio · product designer · updated August 2026": "Lauren Inacio · product designer · atualizado em agosto de 2026",
+    "In brief · the 60-second version": "Em resumo · a versão de 60 segundos",
+    "The problem": "O problema",
+    "The constraint": "A restrição",
+    "What I did": "O que fiz",
+    "The result": "O resultado",
+    "Outcomes": "Resultados",
+    "Lead product designer": "Product designer principal",
+    "Lead UX designer": "UX designer principal"
+  });
+  Object.assign(T.de, {
+    "All case studies": "Alle Fallstudien",
+    "Résumé": "Lebenslauf",
+    "Get in touch": "Kontakt aufnehmen",
+    "Password protected": "Passwortgeschützt",
+    "This case study is confidential": "Diese Fallstudie ist vertraulich",
+    "This work is shared with permission but not publicly. Enter the password from my résumé or application — or": "Diese Arbeit wird mit Genehmigung geteilt, aber nicht öffentlich. Geben Sie das Passwort aus meinem Lebenslauf oder meiner Bewerbung ein — oder",
+    "email me": "schreiben Sie mir",
+    "and I'll send it over.": "und ich schicke es Ihnen.",
+    "Unlock": "Entsperren",
+    "Password": "Passwort",
+    "← Back to all work": "← Zurück zu allen Arbeiten",
+    "← All case studies": "← Alle Fallstudien",
+    "Lauren Inacio · product designer · updated August 2026": "Lauren Inacio · Produktdesignerin · Stand: August 2026",
+    "In brief · the 60-second version": "Kurz gefasst · die 60-Sekunden-Version",
+    "The problem": "Das Problem",
+    "The constraint": "Die Einschränkung",
+    "What I did": "Was ich getan habe",
+    "The result": "Das Ergebnis",
+    "Outcomes": "Ergebnisse",
+    "Lead product designer": "Leitende Produktdesignerin",
+    "Lead UX designer": "Leitende UX-Designerin"
+  });
+  Object.assign(T.nl, {
+    "All case studies": "Alle casestudy's",
+    "Résumé": "Cv",
+    "Get in touch": "Neem contact op",
+    "Password protected": "Beveiligd met wachtwoord",
+    "This case study is confidential": "Deze casestudy is vertrouwelijk",
+    "This work is shared with permission but not publicly. Enter the password from my résumé or application — or": "Dit werk wordt met toestemming gedeeld, maar niet openbaar. Voer het wachtwoord uit mijn cv of sollicitatie in — of",
+    "email me": "mail me",
+    "and I'll send it over.": "dan stuur ik het toe.",
+    "Unlock": "Ontgrendelen",
+    "Password": "Wachtwoord",
+    "← Back to all work": "← Terug naar al het werk",
+    "← All case studies": "← Alle casestudy's",
+    "Lauren Inacio · product designer · updated August 2026": "Lauren Inacio · productontwerper · bijgewerkt augustus 2026",
+    "In brief · the 60-second version": "In het kort · de 60-secondenversie",
+    "The problem": "Het probleem",
+    "The constraint": "De beperking",
+    "What I did": "Wat ik deed",
+    "The result": "Het resultaat",
+    "Outcomes": "Resultaten",
+    "Lead product designer": "Lead productdesigner",
+    "Lead UX designer": "Lead UX-designer"
+  });
+})();
