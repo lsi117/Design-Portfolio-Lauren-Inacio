@@ -1,6 +1,6 @@
 (function(){
   if(window.__liPalInit) return; window.__liPalInit=true;
-  var HOME='Lauren Inacio - Home.dc.html';
+  var HOME='index.html';
   var L={
     en:{home:'Home',cases:'Case studies',how:'How I work',about:'About',contact:'Contact',fac:'Facilitation & leadership',
         nav:'Navigate',cs:'Case study',fc:'Facilitation',live:'Live demo',act:'Action',
@@ -37,12 +37,12 @@
       [t.about, HOME+'#about', t.nav],
       [t.contact, HOME+'#contact', t.nav],
       [t.fac, HOME+'#archive', t.nav],
-      ['watsonx Code Assistant for Z', 'Case - watsonx Code Assistant for Z.dc.html', t.cs],
-      ['Adventure Buddy', 'Case - Adventure Buddy.dc.html', t.cs],
-      ['z/OS Cloud Broker', 'Case - zOS Cloud Broker.dc.html', t.cs],
-      ['Zones Enablement Portal', 'Case - Zones Enablement Portal.dc.html', t.cs],
-      [t.coach, 'Archive - Design Thinking Coach.dc.html', t.fc],
-      [t.sf, 'Archive - State Farm Workshop.dc.html', t.fc],
+      ['watsonx Code Assistant for Z', 'watsonx.html', t.cs],
+      ['Adventure Buddy', 'adventure-buddy.html', t.cs],
+      ['z/OS Cloud Broker', 'cloud-broker.html', t.cs],
+      ['Zones Enablement Portal', 'zones.html', t.cs],
+      [t.coach, 'design-thinking-coach.html', t.fc],
+      [t.sf, 'statefarm.html', t.fc],
       [t.abLive, 'https://lsi117.github.io/Adventure-Buddy/', t.live],
       [t.znLive, 'https://lsi117.github.io/ZEP-RD/', t.live],
       [t.resume, 'assets/Lauren_Inacio_Product_Designer_Resume_2026.pdf', t.act],
