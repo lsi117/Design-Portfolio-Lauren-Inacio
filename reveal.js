@@ -74,11 +74,13 @@
     });
   }
   // hero headline word stagger (once)
-  var didStagger=false;
+  var didStagger=false,_sTxt='',_sOk=0;
   function stagger(){
     if(didStagger) return;
     var h1=document.querySelector('[data-stagger]');
     if(!h1||!h1.textContent.trim()||h1.textContent.indexOf('{{')!==-1) return;
+    if(h1.textContent!==_sTxt){ _sTxt=h1.textContent; _sOk=0; return; }
+    if(++_sOk<3) return;
     didStagger=true;
     var nodes=[];
     (function walk(n){ Array.prototype.slice.call(n.childNodes).forEach(function(c){ if(c.nodeType===3) nodes.push(c); else if(c.nodeType===1) walk(c); }); })(h1);
@@ -104,6 +106,7 @@
     }); });
   }
   // terminal decode on the eyebrow (once)
-  tag(); tagCounts(); tilts(); stagger();
-  setInterval(function(){ tag(); tagCounts(); tilts(); stagger(); }, 900);
+  tag(); tagCounts(); tilts();
+  var sIv=setInterval(function(){ if(didStagger){ clearInterval(sIv); return; } stagger(); }, 250);
+  setInterval(function(){ tag(); tagCounts(); tilts(); }, 900);
 })();

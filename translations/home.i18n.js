@@ -2,6 +2,8 @@
   var T = window.LI_TR = window.LI_TR || {};
   ['pt', 'de', 'nl'].forEach(function (l) { T[l] = T[l] || {}; });
   Object.assign(T.pt, {
+    "Making mainframe resources feel native inside OpenShift": "Fazer os recursos de mainframe parecerem nativos no OpenShift",
+    "The portal that turned out to be a sales tool": "O portal que se revelou uma ferramenta de vendas",
     "Case studies": "Estudos de caso",
     "Strengths": "Pontos fortes",
     "About": "Sobre",
@@ -72,7 +74,7 @@
     "2022 IBM Cloud Integrator, team award": "IBM Cloud Integrator 2022, prémio de equipa",
     "4 years": "4 anos",
     "on the product, 2 as product lead": "no produto, 2 como líder de design",
-    "2020–2024 · Product lead": "2020–2024 · Líder de design",
+    "2020–2024 · Product lead 2022–2024": "2020–2024 · Líder de design 2022–2024",
     "Patterns and documentation kept honest for engineering.": "Padrões e documentação mantidos honestos para a engenharia.",
     "Zones sellers were advising hospitals on security technologies nobody had given them time to learn. I interviewed them, mapped the as-is experience, and shipped a focused portal of modular lessons and inline knowledge checks. Years later I returned and rebuilt it as a documented system.": "Os vendedores da Zones aconselhavam hospitais sobre tecnologias de segurança que ninguém lhes tinha dado tempo para aprender. Entrevistei-os, mapeei a experiência atual e lancei um portal focado de lições modulares e verificações de conhecimento inline. Anos depois, voltei e reconstruí-o como um sistema documentado.",
     "“Best in 40 years”": "“O melhor em 40 anos”",
@@ -87,6 +89,8 @@
     "Mike Perry — National Channels Sales Executive, IBM · on the Zones enablement portal": "Mike Perry — Executivo Nacional de Vendas de Canais, IBM · sobre o portal de capacitação Zones"
   });
   Object.assign(T.de, {
+    "Making mainframe resources feel native inside OpenShift": "Mainframe-Ressourcen in OpenShift nativ wirken lassen",
+    "The portal that turned out to be a sales tool": "Das Portal, das sich als Vertriebswerkzeug erwies",
     "Case studies": "Fallstudien",
     "Strengths": "Stärken",
     "About": "Über mich",
@@ -157,7 +161,7 @@
     "2022 IBM Cloud Integrator, team award": "IBM Cloud Integrator 2022, Teampreis",
     "4 years": "4 Jahre",
     "on the product, 2 as product lead": "am Produkt, 2 als Design-Lead",
-    "2020–2024 · Product lead": "2020–2024 · Design-Lead",
+    "2020–2024 · Product lead 2022–2024": "2020–2024 · Design-Lead 2022–2024",
     "Patterns and documentation kept honest for engineering.": "Muster und Dokumentation, ehrlich gehalten fürs Engineering.",
     "Zones sellers were advising hospitals on security technologies nobody had given them time to learn. I interviewed them, mapped the as-is experience, and shipped a focused portal of modular lessons and inline knowledge checks. Years later I returned and rebuilt it as a documented system.": "Zones-Vertriebler berieten Krankenhäuser zu Sicherheitstechnologien, für deren Erlernen ihnen niemand Zeit gegeben hatte. Ich interviewte sie, kartierte die Ist-Erfahrung und lieferte ein fokussiertes Portal aus modularen Lektionen und Inline-Wissenschecks aus. Jahre später kehrte ich zurück und baute es als dokumentiertes System neu auf.",
     "“Best in 40 years”": "„Das Beste in 40 Jahren“",
@@ -172,6 +176,8 @@
     "Mike Perry — National Channels Sales Executive, IBM · on the Zones enablement portal": "Mike Perry — National Channels Sales Executive, IBM · über das Zones-Enablement-Portal"
   });
   Object.assign(T.nl, {
+    "Making mainframe resources feel native inside OpenShift": "Mainframe-resources native laten aanvoelen in OpenShift",
+    "The portal that turned out to be a sales tool": "Het portaal dat een salestool bleek te zijn",
     "Case studies": "Casestudy's",
     "Strengths": "Sterke punten",
     "About": "Over mij",
@@ -242,7 +248,7 @@
     "2022 IBM Cloud Integrator, team award": "IBM Cloud Integrator 2022, teamaward",
     "4 years": "4 jaar",
     "on the product, 2 as product lead": "op het product, 2 als design lead",
-    "2020–2024 · Product lead": "2020–2024 · Design lead",
+    "2020–2024 · Product lead 2022–2024": "2020–2024 · Design lead 2022–2024",
     "Patterns and documentation kept honest for engineering.": "Patronen en documentatie eerlijk gehouden voor engineering.",
     "Zones sellers were advising hospitals on security technologies nobody had given them time to learn. I interviewed them, mapped the as-is experience, and shipped a focused portal of modular lessons and inline knowledge checks. Years later I returned and rebuilt it as a documented system.": "Zones-verkopers adviseerden ziekenhuizen over beveiligingstechnologieën waarvoor niemand hun tijd had gegeven om ze te leren. Ik interviewde hen, bracht de bestaande ervaring in kaart en leverde een gericht portaal op met modulaire lessen en inline kennischecks. Jaren later keerde ik terug en herbouwde het als een gedocumenteerd systeem.",
     "“Best in 40 years”": "\u201CBeste in 40 jaar\u201D",

@@ -22,7 +22,7 @@
     while ((n = tw.nextNode())) {
       var p = n.parentNode;
       if (!p || p.nodeName === 'SCRIPT' || p.nodeName === 'STYLE') continue;
-      if (n.__liEn === undefined) {
+      if (n.__liEn === undefined || (n.__liSet !== undefined && n.nodeValue !== n.__liSet)) {
         var t = norm(n.nodeValue);
         if (!t) continue;
         n.__liEn = n.nodeValue; n.__liKey = t;
@@ -30,6 +30,7 @@
       var tr = d ? d[n.__liKey] : null;
       var want = (tr === undefined || tr === null) ? n.__liEn : tr;
       if (n.nodeValue !== want) n.nodeValue = want;
+      n.__liSet = want;
     }
     var all = document.body.querySelectorAll('*');
     for (var i = 0; i < all.length; i++) {
@@ -37,12 +38,14 @@
       for (var j = 0; j < ATTRS.length; j++) {
         var a = ATTRS[j];
         if (!el.hasAttribute(a)) continue;
-        el.__liA = el.__liA || {};
-        if (el.__liA[a] === undefined) el.__liA[a] = el.getAttribute(a);
+        el.__liA = el.__liA || {}; el.__liAS = el.__liAS || {};
+        var cur = el.getAttribute(a);
+        if (el.__liA[a] === undefined || (el.__liAS[a] !== undefined && cur !== el.__liAS[a])) el.__liA[a] = cur;
         var en = el.__liA[a];
         var tr2 = d ? d[norm(en)] : null;
         var want2 = (tr2 === undefined || tr2 === null) ? en : tr2;
-        if (el.getAttribute(a) !== want2) el.setAttribute(a, want2);
+        if (cur !== want2) el.setAttribute(a, want2);
+        el.__liAS[a] = want2;
       }
     }
     document.documentElement.lang = lang();
@@ -138,5 +141,13 @@
     setInterval(function () { var l = lang(); if (l !== cur) { cur = l; apply(); } }, 600);
     window.addEventListener('storage', function (e) { if (e.key === 'li-lang') apply(); });
   }
-  if (document.body) boot(); else document.addEventListener('DOMContentLoaded', boot);
+  var booted = false;
+  function bootOnce() { if (booted) return; booted = true; boot(); }
+  if (document.body) bootOnce();
+  else {
+    document.addEventListener('DOMContentLoaded', bootOnce);
+    var bw = setInterval(function () { if (document.body) { clearInterval(bw); bootOnce(); } }, 50);
+  }
+  window.addEventListener('load', function () { bootOnce(); apply(); });
+  setTimeout(function () { bootOnce(); apply(); }, 1200);
 })();

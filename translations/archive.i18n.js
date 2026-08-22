@@ -2,8 +2,9 @@
   var T = window.LI_TR = window.LI_TR || {};
   ['pt', 'de', 'nl'].forEach(function (l) { T[l] = T[l] || {}; });
   Object.assign(T.pt, {
+    "The challenge": "O desafio",
     "From the archive": "Do arquivo",
-    "Back to the archive": "Voltar ao arquivo",
+    "Back to facilitation & leadership": "Voltar a Facilitação e liderança",
     "Facilitation: Enterprise Design Thinking Coach": "Facilitação: Enterprise Design Thinking Coach",
     "Over a 12-week co-creator program, I coached a team of three non-designers and one new designer through Enterprise Design Thinking, from hopes and fears to a validated MVP.": "Ao longo de um programa co-creator de 12 semanas, treinei uma equipa de três não-designers e uma designer nova em Enterprise Design Thinking, das esperanças e receios até um MVP validado.",
     "12 weeks": "12 semanas",
@@ -49,8 +50,9 @@
     "Team 1 pitching to the judges and their colleagues": "A Equipa 1 a apresentar aos júris e aos colegas"
   });
   Object.assign(T.de, {
+    "The challenge": "Die Herausforderung",
     "From the archive": "Aus dem Archiv",
-    "Back to the archive": "Zurück zum Archiv",
+    "Back to facilitation & leadership": "Zurück zu Facilitation & Leadership",
     "Facilitation: Enterprise Design Thinking Coach": "Facilitation: Enterprise-Design-Thinking-Coach",
     "Over a 12-week co-creator program, I coached a team of three non-designers and one new designer through Enterprise Design Thinking, from hopes and fears to a validated MVP.": "In einem 12-wöchigen Co-Creator-Programm coachte ich ein Team aus drei Nicht-Designern und einer neuen Designerin durch Enterprise Design Thinking — von Hoffnungen und Ängsten bis zum validierten MVP.",
     "12 weeks": "12 Wochen",
@@ -96,8 +98,9 @@
     "Team 1 pitching to the judges and their colleagues": "Team 1 beim Pitch vor der Jury und den Kollegen"
   });
   Object.assign(T.nl, {
+    "The challenge": "De uitdaging",
     "From the archive": "Uit het archief",
-    "Back to the archive": "Terug naar het archief",
+    "Back to facilitation & leadership": "Terug naar facilitatie & leiderschap",
     "Facilitation: Enterprise Design Thinking Coach": "Facilitatie: Enterprise Design Thinking Coach",
     "Over a 12-week co-creator program, I coached a team of three non-designers and one new designer through Enterprise Design Thinking, from hopes and fears to a validated MVP.": "Tijdens een co-creatorprogramma van 12 weken coachte ik een team van drie niet-designers en één nieuwe designer door Enterprise Design Thinking, van hoop en angsten tot een gevalideerd MVP.",
     "12 weeks": "12 weken",

@@ -2,6 +2,7 @@
   var T = window.LI_TR = window.LI_TR || {};
   ['pt', 'de', 'nl'].forEach(function (l) { T[l] = T[l] || {}; });
   Object.assign(T.pt, {
+    "Change language": "Mudar idioma",
     "All case studies": "Todos os estudos de caso",
     "Résumé": "Currículo",
     "Get in touch": "Entrar em contacto",
@@ -25,6 +26,7 @@
     "Lead UX designer": "UX designer principal"
   });
   Object.assign(T.de, {
+    "Change language": "Sprache ändern",
     "All case studies": "Alle Fallstudien",
     "Résumé": "Lebenslauf",
     "Get in touch": "Kontakt aufnehmen",
@@ -48,6 +50,7 @@
     "Lead UX designer": "Leitende UX-Designerin"
   });
   Object.assign(T.nl, {
+    "Change language": "Taal wijzigen",
     "All case studies": "Alle casestudy's",
     "Résumé": "Cv",
     "Get in touch": "Neem contact op",

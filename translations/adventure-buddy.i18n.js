@@ -2,6 +2,14 @@
   var T = window.LI_TR = window.LI_TR || {};
   ['pt', 'de', 'nl'].forEach(function (l) { T[l] = T[l] || {}; });
   Object.assign(T.pt, {
+    "Meet Maya: steady miles, no summit chasing": "Conheça a Maya: quilómetros constantes, sem caçar cumes",
+    "Friday night: a friend sends her the app": "Sexta à noite: uma amiga envia-lhe a app",
+    "Onboarding: a form for her true self": "Onboarding: um formulário para o seu verdadeiro eu",
+    "Browsing: invitations, not profiles": "A explorar: convites, não perfis",
+    "Confirmed: anticipation before the hike": "Confirmado: expectativa antes da caminhada",
+    "Trail check-in: someone she trusts knows her route": "Check-in no trilho: alguém de confiança conhece a sua rota",
+    "Sunday, 7:22 AM on Wildwood trail": "Domingo, 7h22 no trilho Wildwood",
+    "Home by noon: reviews, new buddies, next RSVP": "Em casa ao meio-dia: avaliações, novos buddies, próximo RSVP",
     "Case study 02 · Self-initiated · Brand + product": "Estudo de caso 02 · Iniciativa própria · Marca + produto",
     "A whole product, built from one written brief": "Um produto inteiro, construído a partir de um único brief escrito",
     "Adventure Buddy connects people through real outings, not endless profiles. Create a hike, invite others, and let the trail do the talking. I owned every layer: palette, type, voice, iconography, mobile product, and marketing site, documented as a real design system.": "O Adventure Buddy liga pessoas através de saídas reais, não de perfis intermináveis. Crie uma caminhada, convide outros e deixe o trilho falar por si. Fui dona de todas as camadas: paleta, tipografia, voz, iconografia, produto mobile e site de marketing, tudo documentado como um verdadeiro design system.",
@@ -40,6 +48,14 @@
     "Adventure Buddy product screens": "Ecrãs do produto Adventure Buddy"
   });
   Object.assign(T.de, {
+    "Meet Maya: steady miles, no summit chasing": "Das ist Maya: gleichmäßige Kilometer, keine Gipfeljagd",
+    "Friday night: a friend sends her the app": "Freitagabend: eine Freundin schickt ihr die App",
+    "Onboarding: a form for her true self": "Onboarding: ein Formular für ihr wahres Ich",
+    "Browsing: invitations, not profiles": "Stöbern: Einladungen statt Profile",
+    "Confirmed: anticipation before the hike": "Bestätigt: Vorfreude vor der Wanderung",
+    "Trail check-in: someone she trusts knows her route": "Trail-Check-in: jemand, dem sie vertraut, kennt ihre Route",
+    "Sunday, 7:22 AM on Wildwood trail": "Sonntag, 7:22 Uhr auf dem Wildwood-Trail",
+    "Home by noon: reviews, new buddies, next RSVP": "Mittags zu Hause: Bewertungen, neue Buddies, nächste Zusage",
     "Case study 02 · Self-initiated · Brand + product": "Fallstudie 02 · Eigeninitiative · Marke + Produkt",
     "A whole product, built from one written brief": "Ein ganzes Produkt, gebaut aus einem einzigen schriftlichen Brief",
     "Adventure Buddy connects people through real outings, not endless profiles. Create a hike, invite others, and let the trail do the talking. I owned every layer: palette, type, voice, iconography, mobile product, and marketing site, documented as a real design system.": "Adventure Buddy verbindet Menschen über echte Ausflüge, nicht über endlose Profile. Eine Wanderung anlegen, andere einladen und den Trail sprechen lassen. Ich verantwortete jede Ebene: Palette, Typografie, Stimme, Ikonografie, Mobile-Produkt und Marketing-Site — dokumentiert als echtes Designsystem.",
@@ -78,6 +94,14 @@
     "Adventure Buddy product screens": "Adventure-Buddy-Produktscreens"
   });
   Object.assign(T.nl, {
+    "Meet Maya: steady miles, no summit chasing": "Maak kennis met Maya: gestage kilometers, geen toppenjacht",
+    "Friday night: a friend sends her the app": "Vrijdagavond: een vriendin stuurt haar de app",
+    "Onboarding: a form for her true self": "Onboarding: een formulier voor haar ware zelf",
+    "Browsing: invitations, not profiles": "Bladeren: uitnodigingen, geen profielen",
+    "Confirmed: anticipation before the hike": "Bevestigd: voorpret voor de wandeling",
+    "Trail check-in: someone she trusts knows her route": "Trail-check-in: iemand die ze vertrouwt kent haar route",
+    "Sunday, 7:22 AM on Wildwood trail": "Zondag, 7:22 uur op de Wildwood-trail",
+    "Home by noon: reviews, new buddies, next RSVP": "Rond de middag thuis: reviews, nieuwe buddies, volgende RSVP",
     "Case study 02 · Self-initiated · Brand + product": "Casestudy 02 · Eigen initiatief · Merk + product",
     "A whole product, built from one written brief": "Een heel product, gebouwd vanuit één geschreven brief",
     "Adventure Buddy connects people through real outings, not endless profiles. Create a hike, invite others, and let the trail do the talking. I owned every layer: palette, type, voice, iconography, mobile product, and marketing site, documented as a real design system.": "Adventure Buddy verbindt mensen via echte uitstapjes, niet via eindeloze profielen. Maak een wandeling aan, nodig anderen uit en laat het pad het woord doen. Ik was eigenaar van elke laag: palet, typografie, stem, iconografie, mobiel product en marketingsite, gedocumenteerd als een echt designsysteem.",
