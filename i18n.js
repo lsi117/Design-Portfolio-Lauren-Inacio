@@ -88,8 +88,10 @@
   }
   function buildSwitcher(nav) {
     wrap = document.createElement('div');
+    wrap.setAttribute('data-li-injected', '');
     wrap.style.cssText = 'position:relative;display:inline-flex;';
     btn = document.createElement('button');
+    btn.setAttribute('data-li-btn', '');
     btn.setAttribute('aria-label', 'Change language');
     btn.style.cssText = 'display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border:1px solid var(--border-default,#D8D2C4);border-radius:var(--radius-pill,4px);background:transparent;color:var(--fg-1,#1F1D24);font-family:var(--font-mono,monospace);font-size:12px;letter-spacing:0.06em;cursor:pointer;';
     btn.appendChild(document.createTextNode(''));
@@ -123,14 +125,34 @@
     if (last) nav.insertBefore(wrap, last); else nav.appendChild(wrap);
     syncButton();
   }
-  var tries = 0;
-  var injector = setInterval(function () {
-    tries++;
-    if (document.querySelector('button[aria-label="Change language"]')) { clearInterval(injector); return; }
+  /* Self-healing: the page can re-render its header after we inject (framework
+     hydration), leaving zero or duplicate pickers. Reconcile forever. */
+  function ensureSwitcher() {
+    var injected = document.querySelectorAll('[data-li-injected]');
+    var native = null;
+    var cands = document.querySelectorAll('button[aria-label="Change language"]');
+    for (var i = 0; i < cands.length; i++) {
+      if (!cands[i].hasAttribute('data-li-btn') && !cands[i].closest('[data-li-injected]')) { native = cands[i]; break; }
+    }
+    if (native) { /* page has its own switcher — remove anything we injected */
+      for (var i = 0; i < injected.length; i++) injected[i].parentNode && injected[i].parentNode.removeChild(injected[i]);
+      btn = menu = wrap = null;
+      return;
+    }
+    if (wrap && wrap.isConnected) { /* ours is live — remove stale clones */
+      for (var i = 0; i < injected.length; i++) {
+        if (injected[i] !== wrap) injected[i].parentNode && injected[i].parentNode.removeChild(injected[i]);
+      }
+      return;
+    }
+    /* ours is gone (or never built) — clear inert leftovers and rebuild */
+    for (var i = 0; i < injected.length; i++) injected[i].parentNode && injected[i].parentNode.removeChild(injected[i]);
+    btn = menu = wrap = null;
     var nav = document.querySelector('header nav');
-    if (nav) { clearInterval(injector); buildSwitcher(nav); }
-    else if (tries > 40) clearInterval(injector);
-  }, 300);
+    if (nav) buildSwitcher(nav);
+  }
+  ensureSwitcher();
+  setInterval(ensureSwitcher, 500);
 
   /* ---- boot ---- */
   function boot() {
