@@ -1,4 +1,5 @@
 (function(){
+  if(window.__liPalInit) return; window.__liPalInit=true;
   var HOME='Lauren Inacio - Home.dc.html';
   var L={
     en:{home:'Home',cases:'Case studies',how:'How I work',about:'About',contact:'Contact',fac:'Facilitation & leadership',

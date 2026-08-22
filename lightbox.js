@@ -53,7 +53,6 @@
     }
   });
   setInterval(function(){
-  if(window.__lbInit) return; window.__lbInit=true;
     document.querySelectorAll('img').forEach(function(img){
       if(!img.closest('a') && !img.closest('#lb-overlay') && img.clientWidth>=120) img.classList.add('lb-zoomable');
     });

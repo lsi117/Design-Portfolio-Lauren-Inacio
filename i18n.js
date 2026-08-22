@@ -3,6 +3,8 @@
    in localStorage 'li-lang', and injects a language dropdown into the header
    nav on pages without a native switcher. */
 (function () {
+  if (window.__LI_I18N_LOADED) return; /* script can be evaluated twice (inline + head-mounted) */
+  window.__LI_I18N_LOADED = true;
   var LANGS = {
     en: { name: 'English (US)', flag: '\uD83C\uDDFA\uD83C\uDDF8' },
     pt: { name: 'Portugu\u00EAs (Europeu)', flag: '\uD83C\uDDF5\uD83C\uDDF9' },
@@ -59,6 +61,7 @@
       try { walk(); } catch (e) {}
       if (observer) observer.observe(document.body, { childList: true, subtree: true, characterData: true });
       syncButton();
+      try { ensureSwitcher(); } catch (e) {}
     });
   }
   window.LIi18n = {
@@ -71,14 +74,22 @@
   };
 
   /* ---- injected switcher (skipped when the page has its own) ---- */
-  var btn = null, menu = null, wrap = null;
+  /* All picker behavior is DELEGATED to one document-level listener, so it works
+     on ANY copy of the picker markup — including copies the page framework
+     re-creates from a captured template. No per-node listeners, no ownership. */
+  var menuOpen = false;
   function syncButton() {
-    if (!btn) return;
     var l = lang();
-    btn.firstChild.textContent = LANGS[l].flag;
-    btn.childNodes[1].textContent = ' ' + l.toUpperCase() + ' ';
-    if (menu) {
-      var items = menu.querySelectorAll('button');
+    var wraps = document.querySelectorAll('[data-li-injected]');
+    for (var w = 0; w < wraps.length; w++) {
+      var m0 = wraps[w].querySelector('[role="menu"]');
+      if (m0) m0.style.display = menuOpen ? 'block' : 'none';
+      var b = wraps[w].querySelector('[data-li-btn]');
+      if (b && b.childNodes.length >= 2) {
+        b.firstChild.textContent = LANGS[l].flag;
+        b.childNodes[1].textContent = ' ' + l.toUpperCase() + ' ';
+      }
+      var items = wraps[w].querySelectorAll('button[data-lang]');
       for (var i = 0; i < items.length; i++) {
         var on = items[i].getAttribute('data-lang') === l;
         items[i].style.background = on ? 'var(--color-brand-soft, #E9E4F5)' : 'transparent';
@@ -87,10 +98,10 @@
     }
   }
   function buildSwitcher(nav) {
-    wrap = document.createElement('div');
+    var wrap = document.createElement('div');
     wrap.setAttribute('data-li-injected', '');
     wrap.style.cssText = 'position:relative;display:inline-flex;';
-    btn = document.createElement('button');
+    var btn = document.createElement('button');
     btn.setAttribute('data-li-btn', '');
     btn.setAttribute('aria-label', 'Change language');
     btn.style.cssText = 'display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border:1px solid var(--border-default,#D8D2C4);border-radius:var(--radius-pill,4px);background:transparent;color:var(--fg-1,#1F1D24);font-family:var(--font-mono,monospace);font-size:12px;letter-spacing:0.06em;cursor:pointer;';
@@ -99,7 +110,7 @@
     var chev = document.createElement('span');
     chev.textContent = '\u25BE'; chev.style.cssText = 'font-size:9px;opacity:0.6;';
     btn.appendChild(chev);
-    menu = document.createElement('div');
+    var menu = document.createElement('div');
     menu.setAttribute('role', 'menu');
     menu.style.cssText = 'position:absolute;right:0;top:calc(100% + 8px);min-width:210px;padding:6px;border-radius:var(--radius-md,3px);background:var(--bg-surface,#fff);border:1px solid var(--border-default,#D8D2C4);box-shadow:0 18px 40px rgba(31,29,36,0.14);display:none;z-index:60;';
     Object.keys(LANGS).forEach(function (k) {
@@ -108,23 +119,32 @@
       it.setAttribute('data-lang', k);
       it.style.cssText = 'display:flex;align-items:center;gap:10px;width:100%;min-height:40px;padding:0 12px;border:none;border-radius:2px;background:transparent;font-family:var(--font-sans,sans-serif);font-size:14px;text-align:left;cursor:pointer;';
       it.textContent = LANGS[k].flag + '  ' + LANGS[k].name;
-      it.addEventListener('click', function () {
-        window.LIi18n.set(k);
-        menu.style.display = 'none';
-      });
       menu.appendChild(it);
     });
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
-      syncButton();
-    });
-    document.addEventListener('click', function () { if (menu) menu.style.display = 'none'; });
     wrap.appendChild(btn); wrap.appendChild(menu);
     var last = nav.lastElementChild;
     if (last) nav.insertBefore(wrap, last); else nav.appendChild(wrap);
     syncButton();
   }
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    var pick = t.closest ? t.closest('[data-li-injected] button[data-lang]') : null;
+    var toggle = t.closest ? t.closest('[data-li-btn]') : null;
+    var menus = document.querySelectorAll('[data-li-injected] [role="menu"]');
+    if (pick) {
+      window.LIi18n.set(pick.getAttribute('data-lang'));
+      menuOpen = false;
+      for (var i = 0; i < menus.length; i++) menus[i].style.display = 'none';
+      return;
+    }
+    if (toggle) {
+      var m = toggle.parentNode.querySelector('[role="menu"]');
+      if (m) { menuOpen = m.style.display === 'none'; m.style.display = menuOpen ? 'block' : 'none'; syncButton(); }
+      return;
+    }
+    menuOpen = false;
+    for (var i = 0; i < menus.length; i++) menus[i].style.display = 'none';
+  });
   /* Self-healing: the page can re-render its header after we inject (framework
      hydration), leaving zero or duplicate pickers. Reconcile forever. */
   function ensureSwitcher() {
@@ -141,20 +161,14 @@
     }
     if (native) { /* page has its own switcher — remove anything we injected */
       for (var i = 0; i < injected.length; i++) injected[i].parentNode && injected[i].parentNode.removeChild(injected[i]);
-      btn = menu = wrap = null;
       return;
     }
-    if (wrap && wrap.isConnected) { /* ours is live — remove stale clones */
-      for (var i = 0; i < injected.length; i++) {
-        if (injected[i] !== wrap) injected[i].parentNode && injected[i].parentNode.removeChild(injected[i]);
-      }
-      return;
+    /* keep exactly one copy — whichever is first; delegation makes any copy work */
+    for (var i = 1; i < injected.length; i++) injected[i].parentNode && injected[i].parentNode.removeChild(injected[i]);
+    if (injected.length === 0) {
+      var nav = document.querySelector('header nav');
+      if (nav) buildSwitcher(nav);
     }
-    /* ours is gone (or never built) — clear inert leftovers and rebuild */
-    for (var i = 0; i < injected.length; i++) injected[i].parentNode && injected[i].parentNode.removeChild(injected[i]);
-    btn = menu = wrap = null;
-    var nav = document.querySelector('header nav');
-    if (nav) buildSwitcher(nav);
   }
   ensureSwitcher();
   setInterval(ensureSwitcher, 500);
