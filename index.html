@@ -46,9 +46,9 @@
 <script src="palette.js?v=2"></script>
 <script src="reveal.js?v=5"></script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<script src="translations/common.i18n.js?v=4"></script>
-<script src="translations/home.i18n.js?v=4"></script>
-<script src="i18n.js?v=4"></script>
+<script src="translations/common.i18n.js?v=5"></script>
+<script src="translations/home.i18n.js?v=5"></script>
+<script src="i18n.js?v=5"></script>
 </helmet>
 
 <div data-theme="light" data-accent="{{ accent }}" data-density="{{ density }}" style="min-height:100vh; background:var(--bg-canvas); color:var(--fg-1); font-family:var(--font-sans);">
@@ -61,7 +61,7 @@
       <a href="#about" style="color:var(--fg-2); padding-bottom:3px; border-bottom:1.5px solid transparent; transition:color 140ms, border-color 140ms;" style-hover="color:var(--color-brand); border-bottom:1.5px solid var(--color-brand);">About</a>
       <a href="#contact" style="color:var(--fg-2); padding-bottom:3px; border-bottom:1.5px solid transparent; transition:color 140ms, border-color 140ms;" style-hover="color:var(--color-brand); border-bottom:1.5px solid var(--color-brand);">Contact</a>
       <div style="position:relative;">
-        <button onClick="{{ toggleLangMenu }}" aria-label="Change language" aria-expanded="{{ langMenuOpen }}" style="display:inline-flex; align-items:center; gap:7px; min-height:36px; padding:0 var(--space-4); border:1px solid var(--border-default); border-radius:var(--radius-pill); background:transparent; color:var(--fg-2); font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.04em; cursor:pointer;" style-hover="border-color:var(--color-brand); color:var(--fg-1);"><span aria-hidden="true">{{ curFlag }}</span>{{ curCode }}<span aria-hidden="true" style="font-size:9px;">▾</span></button>
+        <button onClick="{{ toggleLangMenu }}" data-li-native="" aria-label="Change language" aria-expanded="{{ langMenuOpen }}" style="display:inline-flex; align-items:center; gap:7px; min-height:36px; padding:0 var(--space-4); border:1px solid var(--border-default); border-radius:var(--radius-pill); background:transparent; color:var(--fg-2); font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:0.04em; cursor:pointer;" style-hover="border-color:var(--color-brand); color:var(--fg-1);"><span aria-hidden="true">{{ curFlag }}</span>{{ curCode }}<span aria-hidden="true" style="font-size:9px;">▾</span></button>
         <sc-if value="{{ langMenuOpen }}" hint-placeholder-val="{{ false }}">
           <div role="menu" style="position:absolute; right:0; top:calc(100% + 8px); min-width:210px; padding:6px; border-radius:var(--radius-md); background:var(--bg-surface); border:1px solid var(--border-subtle); box-shadow:var(--shadow-lg); display:grid; gap:2px; z-index:50;">
             <sc-for list="{{ langs }}" as="l" hint-placeholder-count="0">

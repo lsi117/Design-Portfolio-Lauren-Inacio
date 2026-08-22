@@ -129,10 +129,15 @@
      hydration), leaving zero or duplicate pickers. Reconcile forever. */
   function ensureSwitcher() {
     var injected = document.querySelectorAll('[data-li-injected]');
-    var native = null;
-    var cands = document.querySelectorAll('button[aria-label="Change language"]');
-    for (var i = 0; i < cands.length; i++) {
-      if (!cands[i].hasAttribute('data-li-btn') && !cands[i].closest('[data-li-injected]')) { native = cands[i]; break; }
+    /* Native pickers are marked data-li-native; also match the aria-label in every
+       site language, since the label itself gets translated. */
+    var native = document.querySelector('[data-li-native]');
+    if (!native) {
+      var LABELS = { 'Change language': 1, 'Mudar idioma': 1, 'Sprache \u00E4ndern': 1, 'Taal wijzigen': 1 };
+      var cands = document.querySelectorAll('header button[aria-label]');
+      for (var i = 0; i < cands.length; i++) {
+        if (LABELS[cands[i].getAttribute('aria-label')] && !cands[i].hasAttribute('data-li-btn') && !cands[i].closest('[data-li-injected]')) { native = cands[i]; break; }
+      }
     }
     if (native) { /* page has its own switcher — remove anything we injected */
       for (var i = 0; i < injected.length; i++) injected[i].parentNode && injected[i].parentNode.removeChild(injected[i]);
