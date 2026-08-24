@@ -50,6 +50,7 @@
     "Inline code lens preview of generated comments": "Pré-visualização inline (code lens) dos comentários gerados"
   });
   Object.assign(T.de, {
+    "Adventure Buddy →": "Adventure Buddy →",
     "Case study 01 · Enterprise AI · IBM": "Fallstudie 01 · Enterprise-KI · IBM",
     "Teaching an AI to explain code a junior developer has never seen": "Einer KI beibringen, Code zu erklären, den ein Junior-Entwickler noch nie gesehen hat",
     "IBM watsonx Code Assistant for Z is a generative AI-assisted product built to accelerate mainframe application modernization. I led end-to-end design for Code Explanation, from the original side panel to a full conversational workflow.": "IBM watsonx Code Assistant for Z ist ein generativ-KI-gestütztes Produkt zur Beschleunigung der Modernisierung von Mainframe-Anwendungen. Ich habe das End-to-End-Design für Code Explanation geleitet — vom ursprünglichen Seitenpanel bis zum vollständigen konversationellen Workflow.",
@@ -97,6 +98,7 @@
     "Inline code lens preview of generated comments": "Inline-Code-Lens-Vorschau der generierten Kommentare"
   });
   Object.assign(T.nl, {
+    "Adventure Buddy →": "Adventure Buddy →",
     "Case study 01 · Enterprise AI · IBM": "Casestudy 01 · Enterprise-AI · IBM",
     "Teaching an AI to explain code a junior developer has never seen": "Een AI leren code uit te leggen die een junior developer nog nooit heeft gezien",
     "IBM watsonx Code Assistant for Z is a generative AI-assisted product built to accelerate mainframe application modernization. I led end-to-end design for Code Explanation, from the original side panel to a full conversational workflow.": "IBM watsonx Code Assistant for Z is een generatief AI-product dat de modernisering van mainframe-applicaties versnelt. Ik leidde het end-to-end ontwerp van Code Explanation, van het oorspronkelijke zijpaneel tot een volledige conversationele workflow.",

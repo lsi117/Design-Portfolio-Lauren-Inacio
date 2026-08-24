@@ -52,8 +52,8 @@
   Object.assign(T.de, {
     "The challenge": "Die Herausforderung",
     "From the archive": "Aus dem Archiv",
-    "Back to facilitation & leadership": "Zurück zu Facilitation & Leadership",
-    "Facilitation: Enterprise Design Thinking Coach": "Facilitation: Enterprise-Design-Thinking-Coach",
+    "Back to facilitation & leadership": "Zurück zu Moderation & Führung",
+    "Facilitation: Enterprise Design Thinking Coach": "Moderation: Enterprise-Design-Thinking-Coach",
     "Over a 12-week co-creator program, I coached a team of three non-designers and one new designer through Enterprise Design Thinking, from hopes and fears to a validated MVP.": "In einem 12-wöchigen Co-Creator-Programm coachte ich ein Team aus drei Nicht-Designern und einer neuen Designerin durch Enterprise Design Thinking — von Hoffnungen und Ängsten bis zum validierten MVP.",
     "12 weeks": "12 Wochen",
     "Team of 4": "Team von 4",
