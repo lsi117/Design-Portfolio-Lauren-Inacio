@@ -45,7 +45,6 @@
       [t.sf, 'statefarm.html', t.fc],
       [t.abLive, 'https://lsi117.github.io/Adventure-Buddy/', t.live],
       [t.znLive, 'https://lsi117.github.io/ZEP-RD/', t.live],
-      [t.resume, 'assets/Lauren_Inacio_Product_Designer_Resume_2026.pdf', t.act],
       [t.email, 'mailto:laureninacio@gmail.com', t.act]
     ];
   }
