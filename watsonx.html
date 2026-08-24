@@ -52,7 +52,7 @@ async function tryUnlock(pass, silent) {
     const pt = await crypto.subtle.decrypt({name:'AES-GCM', iv:b64(IV)}, k, b64(DATA));
     try { localStorage.setItem('li-case-pw', pass); } catch(e) {}
     const view = document.getElementById('view');
-    view.srcdoc = new TextDecoder().decode(pt);
+    view.srcdoc = new TextDecoder().decode(pt).replace(/<head>/i, '<head><base target="_parent">');
     view.style.display = 'block';
     document.getElementById('card').style.display = 'none';
   } catch(e) {
